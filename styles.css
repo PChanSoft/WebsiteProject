@@ -8,43 +8,85 @@ h1 {
 
 .section-heading {
   /* Add your own font here */
+  font-family: 'Courier New', Courier, monospace;
 }
-
-.nav__list {
-
+.nav_list{
+}
+.nav__list li{
+  display:inline-block;
+  margin: 20px;
+  margin-bottom:10px;
 }
 
 .nav__list_item {
-
 }
 
 .page {
-
 }
 
 .page__header {
   background-color: aqua;
-
+  border:1px;
+  width:100%;
+  text-align: right;
+  margin-bottom:-20px;
+  margin-top:-20px;
 }
 .page__content {
+  display:flex;
+  width:100vw;
   background-color: beige;
-
 }
 
 .left-content {
+  position:fixed;
+  bottom:1px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: burlywood;
-
+  width:100px;
+  height:20em;  
 }
 
 .right-content {
+  position:fixed;
+  right:1px;
+  bottom:1px;
+  width: 100px;
+  height:20em;
   background-color: burlywood;
 }
 
 .main-content {
-
+  display:flex;
+  flex-direction: column;
+  margin: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  height:100vh;
 }
 
 .main-content__section {
   background-color: cornsilk;
 
+}
+
+.githubButton{
+  align-self:center;
+}
+
+.linkedInButton{
+  align-self:center;
+}
+
+/*When Screen gets too squished for the content, removed left and right content bars and give more space to the main-content div*/
+@media all and (max-width:900px){
+  .left-content,.right-content{
+    display:none;
+  }
+  .main-content{
+    margin:20px;
+    color:blue;
+  }
 }
